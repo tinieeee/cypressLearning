@@ -6,7 +6,7 @@ describe('Test Web Tables', function(){
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
     })
     it('Get the price for the Python course', function(){
-        // Identify the price for Pythong Languages
+        // Identify the price for Pythong Languages test
         // You need to scan the entire course column to find the Python why we need to scan? position might change 
         // How to get the CSS selector for table and you only want to get the 2nd column the? tr td:nth-child(2)
         // tr is the parend td is the child nth-child(2) is selecting the second index
