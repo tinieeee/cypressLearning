@@ -29,7 +29,7 @@ describe('Testing Calendars', function(){
 
 
             // Then Select day
-            // for day you can in the element it contains abbr so we can just use the contains
+            // for day you can see in the element it contains abbr so we can just use the contains
             // <abbr aria-label="May 31, 2027">31</abbr></button>
             cy.contains("abbr", date).click();
 
