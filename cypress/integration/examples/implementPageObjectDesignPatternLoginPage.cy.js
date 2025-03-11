@@ -20,8 +20,8 @@ describe('Test using Page Object Design Pattern', function()
         const productName = this.data.productName // calling the productname from fixtures
         
         
-        this.loginpage.goTo('https://rahulshettyacademy.com/loginpagePractise/#');
-        cy.visit('https://rahulshettyacademy.com/loginpagePractise/#')
+        //now lets call the environement variable declared in the cypress.config for url
+        cy.visit(Cypress.env('baseurl')+"/loginpagePractise/#")
         const productpage = this.loginpage.login(this.data.username, this.data.password); // form a connection first dun sa login class by adding username and password parameter
         //para magamit natin si fixtures
         //take note we cannot use fixtures doon sa login class valid only dito sa actual test file
