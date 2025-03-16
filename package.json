@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headedTest": "npx cypress run --headed",
+    "recordDashBoardTest": "npx cypress run --record --key 3d71f451-6da1-40af-a108-b619fa0821a7",
+    "chromTest": "npx cypress run --browser chrome",
+    "GreenKartTest": "npx cypress run --spec \"cypress/e2e/GreenKart/*\"",
+    "SmokeTest": "npx cypress run --spec \"cypress/e2e/GreenKart/Test1.cy.js\""
   },
   "author": "",
   "license": "ISC",

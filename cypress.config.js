@@ -12,6 +12,12 @@ module.exports = defineConfig({
     //I wanted to declare the base URL here so all my framework will follow the url what I write here
     baseurl: "https://rahulshettyacademy.com"
   },
+  retries: {
+
+    runMode: 1 // this line will re run the test one more time if the result is failed to see if it pass this time - usually used for flaky tests
+    // (For example you have 30 test cases if 10 of that failed it will only collect those 10 cases and rerun them)
+    },
+
   e2e: {
     setupNodeEvents(on, config) {
       // This is where you can tweak the behavior of the cypress configurations
@@ -20,6 +26,10 @@ module.exports = defineConfig({
       //based on mochawesome plugin
     },
     // we are pointing here where our test cases are located
-    specPattern: 'cypress/integration/examples/*.js'
+    specPattern: 'cypress/e2e/examples/*.js',
+    specPattern: 'cypress/e2e/GreenKart/*.js'
+
   },
+
+  projectId: "293cd1", // project id in the cypress dashboard
 });
